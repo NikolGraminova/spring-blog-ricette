@@ -1,0 +1,23 @@
+nome repo: spring-blog-ricette
+Benedetta Rossi ci ha affidato l’incarico di creare il suo bog di ricette.
+
+MILESTONE 1
+L’applicazione deve prevedere un’interfaccia di amministrazione, dalla quale è possibile gestire le ricette esistenti e aggiungerne di nuove. 
+Ogni ricetta è caratterizzata da:
+titolo
+lista testuale degli ingredienti e rispettive quantità
+foto (inserita tramite URL)
+tempo di preparazione
+porzioni
+testo della ricetta
+
+MILESTONE 2
+L’home page del blog presenta una lista delle ricette più recenti, con il rispettivo titolo, foto e un breve estratto del testo. 
+Cliccando sulla card di una ricetta si apre la pagina di dettaglio, dove si può leggere la ricetta intera.
+
+BONUS 1
+Nella gestione delle ricette, dare la possibilità all’utente di associare una categoria, 
+così da indicare se si tratta di un antipasto, primo piatto, secondo piatto, contorno o dessert.
+
+BONUS 2
+Implementare un filtro di ricerca su tutti i campi delle ricette

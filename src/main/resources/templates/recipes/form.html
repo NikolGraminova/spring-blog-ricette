@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head th:replace="fragments/head :: head('Form')"></head>
+
+<body>
+
+<div class="container w-75">
+    <h1>Create pizza</h1>
+    <!--form-->
+    <form id="recipe-form"
+          method="post"
+          th:action="${recipe.id == null ? '/list/create' : '/list/edit/' + recipe.id}"
+          th:object="${recipe}">
+        <!--title-->
+        <div class="form-group">
+            <label for="recipe-title">Title</label>
+            <input class="form-control" id="recipe-title" th:field="*{title}" type="text">
+        </div>
+        <!--description-->
+        <div class="form-group">
+            <label for="recipe-description">Description</label>
+            <textarea class="form-control" id="recipe-description" rows="3" th:field="*{description}"></textarea>
+        </div>
+        <!--ingredients-->
+        <div class="form-group">
+            <label for="recipe-ingredients">Ingredients</label>
+            <input class="form-control" id="recipe-ingredients" th:field="*{ingredients}" type="text">
+        </div>
+        <!--time-->
+        <div class="form-group">
+            <label for="recipe-time">Time (hours, minutes)</label>
+            <input class="form-control" id="recipe-time" step="0.01" th:field="*{time}" type="number">
+        </div>
+        <!--servings-->
+        <div class="form-group">
+            <label for="recipe-servings">Servings</label>
+            <select class="form-control" id="recipe-servings" th:field="*{servings}">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <!--image-->
+        <div class="form-group">
+            <label for="recipe-image">Image URL</label>
+            <input class="form-control" id="recipe-image" th:field="*{image}" type="url">
+        </div>
+        <!--buttons-->
+        <button class="btn btn-danger mt-3" type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head th:replace="fragments/head :: head('Details')"></head>
+<body>
+
+<div class="container">
+    <h1>Details</h1>
+    <!--card-->
+    <img alt="recipe-img" class="w-25 mb-1" th:src="${recipe.image}">
+    <h5 th:text="${recipe.title}"></h5>
+    <p class="card-text" th:text="${recipe.description}"></p>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" th:text="|Ingredients: ${recipe.ingredients}|"></li>
+        <li class="list-group-item" th:text="|Time(hours): ${recipe.time}|"></li>
+        <li class="list-group-item" th:text="|Servings: ${recipe.servings}|"></li>
+    </ul>
+    <!--buttons-->
+    <div class="mt-3">
+        <a class="btn btn-danger" th:href="@{/list}">Home</a>
+        <a class="btn btn-danger" th:href="@{/list/delete/{id}(id = ${recipe.id})}">Delete</a>
+    </div>
+</div>
+
+</body>
+</html>
